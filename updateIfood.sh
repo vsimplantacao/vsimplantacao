@@ -12,14 +12,14 @@ log()
 VsOsInterface="2.24.0"
 
 # Prepare
-log "Removendo Vs Print...."
-sudo apt purge vs-print 
-log "Removendo Vs Autopag...."
-sudo apt purge vs-autopag-se
 sudo rm /var/lib/dpkg/lock-frontend
 sudo rm /var/lib/dpkg/lock
 sudo ufw disable
 wget https://raw.githubusercontent.com/wilker-santos/VSDImplantUpdater/main/vsd-launcher.sh -O vsd-launcher 
+log "Removendo Vs Print...."
+sudo apt purge vs-print 
+log "Removendo Vs Autopag...."
+sudo apt purge vs-autopag-se
 
 log "Parando serviços..."
 killall node
