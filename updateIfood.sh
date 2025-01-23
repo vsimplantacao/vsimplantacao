@@ -19,10 +19,14 @@ sudo apt purge vs-autopag-se
 sudo rm /var/lib/dpkg/lock-frontend
 sudo rm /var/lib/dpkg/lock
 sudo ufw disable
+wget https://raw.githubusercontent.com/wilker-santos/VSDImplantUpdater/main/vsd-launcher.sh -O vsd-launcher 
 
 log "Parando serviços..."
-# Stop all services
 killall node
+sudo chmod 755 vsd-launcher
+sudo mv vsd-launcher /usr/bin/
+vsd-launcher -s food
+vsd-launcher --clear-token
 
 # Backups
 log "Criando Backups..."
@@ -31,6 +35,7 @@ sudo mkdir -p /opt/videosoft_bkp_log/vs-os-interface/
 # Install packages
 log "Instalando VS OS Interface...."
 sudo dpkg -i vs-os-interface_$VsOsInterface'_amd64.deb'
+
 
 log "Instalação Concluida"
 echo "*****************Instalação Concluida*************************"
