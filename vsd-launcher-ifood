@@ -1,19 +1,6 @@
  #!/bin/bash
-# sudo wget --inet4-only -O- https://raw.githubusercontent.com/CarloseOldenburg/Versao-iFood/refs/heads/main/versao-ifood | bash
+# sudo wget --inet4-only -O- https://raw.githubusercontent.com/CarloseOldenburg/vsimplantacao/vsimplantacao/main/vsd-launcher-ifood | bash
 
-set -e  # Para o script em caso de erro
-LOG_FILE="install_log.txt"
-
-echo "Iniciando instalação..." | tee -a $LOG_FILE
-
-# Baixar e instalar o vsd-launcher
-echo "Baixando vsd-launcher..." | tee -a $LOG_FILE
-curl -sSL https://raw.githubusercontent.com/CarloseOldenburg/Ferramentas/refs/heads/main/VSD-Launcher -O vsd-launcher 2>&1 | tee -a $LOG_FILE
-sudo chmod 755 vsd-launcher
-sudo mv vsd-launcher /usr/bin/
-
-echo "Executando vsd-launcher..." | tee -a $LOG_FILE
-vsd-launcher --clear-token 2>&1 | tee -a $LOG_FILE
 
 # Desinstalar módulos antigos
 echo "Removendo módulos antigos..." | tee -a $LOG_FILE
