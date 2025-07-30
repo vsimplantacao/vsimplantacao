@@ -1,5 +1,5 @@
  #!/bin/bash
-# sudo wget --inet4-only -O- https://raw.githubusercontent.com/CarloseOldenburg/vsimplantacao/vsimplantacao/main/vsd-launcher-ifood | bash
+# sudo wget --inet4-only -O- https://raw.githubusercontent.com/vsimplantacao/vsimplantacao/main/vsd-launcher-ifood | bash
 
 
 # Desinstalar módulos antigos
