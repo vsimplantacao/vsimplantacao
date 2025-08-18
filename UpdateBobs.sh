@@ -8,7 +8,7 @@ log()
 }
 
 # Versions
-VsOsInterface="2.28.7"
+VsOsInterface="2.28.4"
 VsAutoPagSE="2.33.7"
 
 # Output
